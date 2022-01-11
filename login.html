@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log in</title>
+    <style>
+   
+
+*{
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", "sans-serif";
+    border-radius: 5px;    
+}
+
+body{
+    
+    margin: 0% ;
+    background-image:url("./img/galaxy.jpg") ;
+}
+
+.login_box{
+    position: relative;
+    top:150px;
+    margin:0 auto;
+    width: 300px;
+    padding: 20px;
+    background-color: #EEEFF1;
+    border-radius: 5px;    
+
+}
+input{
+    
+    font-size: 14px;
+    display:block;
+    border: none ;
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: #FFDE06;
+}
+.logintext{
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+#login_btn{
+    border-radius: 5px;
+    background-color: gray;
+    color: white;
+    margin-bottom:30px;
+}
+
+
+#find{
+    text-align: center;
+ 
+}
+a{  
+    color:#9B9B9B;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="login_box">
+        <form action="#">
+            <input type="text"  placeholder="아이디">
+            <input type="password" class="logintext" name="password" placeholder="비밀번호">
+           <input type="submit" value="로그인" id="login_btn">
+        </form>
+        <div id="find"><a href="#">비밀번호를 잊어버리셨나요?</a></div>
+    </div>
+    
+</body>
+</html>

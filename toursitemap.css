@@ -1,0 +1,8 @@
+body{background-image: url("./img/galaxy.jpg") ;}
+@font-face {
+    font-family: "Starjedi";
+    src: url("./font/Starjedi.ttf");
+}
+li{
+    text-decoration: none;
+}

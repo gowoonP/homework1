@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARWORK</title>
+    <style>
+        body{background-image: url("./img/galaxy.jpg") ;}
+        h1{
+            text-align: center;
+            font-family:"Starjedi";
+            font-size: 100px;
+            letter-spacing:1px;
+            -webkit-text-stroke-width: 1px;
+	        -webkit-text-stroke-color: #FFDE06;
+            background-color: black;
+    }
+    #bounce-out-right{
+            
+            text-align: center;
+            margin:100px;
+            padding: 20px;
+            height:60px;
+            animation-name:bounce-out-right;
+            animation-duration: 3s;
+            -webkit-animation: bounce-out-right 1.5s both;
+	        animation: bounce-out-right 3s both;
+            animation-iteration-count: infinite;
+    }
+
+    #time{
+        font-size: 16px;
+        letter-spacing:1px;
+        -webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #FFDE06;
+        
+       
+    }
+   
+    @font-face {
+        font-family: "Starjedi";
+        src: url("./font/Starjedi.ttf");
+    }
+
+    @-webkit-keyframes bounce-out-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  5% {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  15% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  25% {
+    -webkit-transform: translateX(38px);
+            transform: translateX(38px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  38% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  52% {
+    -webkit-transform: translateX(80px);
+            transform: translateX(80px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+}
+@keyframes bounce-out-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  5% {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  15% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  25% {
+    -webkit-transform: translateX(38px);
+            transform: translateX(38px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  38% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  52% {
+    -webkit-transform: translateX(80px);
+            transform: translateX(80px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+    <audio autoplay loop controls src="./img/starwarsmainthem.mp3"></audio>
+    <script>
+
+
+        let timeId = null;
+        
+        function printtime(){
+            const date = new Date();
+            const hh = date.getHours();
+            const mm = date.getMinutes();
+            const ss = date.getSeconds();
+        
+            document.getElementById("time").innerHTML = hh + ":" + mm + ":" + ss
+        }
+        
+        const st = window.setInterval(printtime);  // 입장시 시간 출력
+        
+        function startClock(){
+            window.clearInterval(st);  // start 버튼 누를시 setInterval 종료
+            timeId = window.setInterval(printtime, 1000);  // 다시 시간 표시
+        }
+        
+        function stopClock(){
+            window.clearInterval(st);  // setInterval 종료
+            window.clearInterval(timeId); // setInterval 종료
+        }
+        
+        
+        
+        
+    </script>
+        <div id="time"></div>
+        <p><input type="button" value="start" onclick="startClock('start')"/>
+        <input type="button" value="stop" onclick="stopClock('stop')"/></p>
+           
+        <h1 >starwork</h1>
+       
+                
+                
+                
+ <div>
+
+     
+        <div id= "bounce-out-right">
+           <a href="resum.html"><img width="170" height="170" src="./img/bb8_1.png" alt="비비에잇"></a>
+        </div>
+   
+</div>
+    
+   
+</html>
